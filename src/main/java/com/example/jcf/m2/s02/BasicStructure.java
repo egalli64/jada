@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jcf
  */
-package com.example.jcf.m2.s01;
+package com.example.jcf.m2.s02;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
