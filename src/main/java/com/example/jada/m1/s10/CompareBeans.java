@@ -3,20 +3,20 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s04;
+package com.example.jada.m1.s10;
 
 /**
- * Example for Comparable::compareTo on records
+ * Example for Comparable::compareTo on JavaBeans
  */
-public class CompareRecords {
+public class CompareBeans {
     /**
-     * Create two comparable records and compare them
+     * Create two comparable beans and compare them
      * 
      * @param args not used
      */
     public static void main(String[] args) {
-        Dog tomBob = new Dog("Tom", "Bob");
-        Dog tomCarl = new Dog("Tom", "Carl");
+        DogBean tomBob = new DogBean("Tom", "Bob");
+        DogBean tomCarl = new DogBean("Tom", "Carl");
         if (tomBob.compareTo(tomCarl) < 0) {
             System.out.println("Tom-Bob is before Tom-Carl");
         } else {
