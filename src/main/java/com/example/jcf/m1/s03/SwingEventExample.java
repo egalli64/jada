@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jcf
  */
-package com.example.jcf.m1.s3;
+package com.example.jcf.m1.s03;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

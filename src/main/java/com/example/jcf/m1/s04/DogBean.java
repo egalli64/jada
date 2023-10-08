@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jcf
  */
-package com.example.jcf.m1.s4;
+package com.example.jcf.m1.s04;
 
 import java.util.Objects;
 

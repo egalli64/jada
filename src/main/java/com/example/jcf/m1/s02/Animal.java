@@ -3,10 +3,10 @@
  * 
  * https://github.com/egalli64/jcf
  */
-package com.example.jcf.m1.s2;
+package com.example.jcf.m1.s02;
 
 /**
- * A class
+ * An interface
  */
-public class Dog implements Animal {
+public interface Animal {
 }

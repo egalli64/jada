@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jcf
  */
-package com.example.jcf.m1.s2;
+package com.example.jcf.m1.s02;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +14,10 @@ import java.util.List;
  * @see Animal an interface
  * @see Dog a class implementing Animal
  */
-public class MainLimitations {
+public class GenericExamples {
     /**
-     * Show a few limitations due to how generic is implemented in Java
+     * The generic parametric type is tested at compile type but it is _not_
+     * available to the JVM at runtime!
      * 
      * @param args not used
      */
