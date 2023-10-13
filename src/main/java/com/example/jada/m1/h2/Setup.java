@@ -1,3 +1,8 @@
+/*
+ * Introduction to Data Structures in Java
+ * 
+ * https://github.com/egalli64/jada
+ */
 package com.example.jada.m1.h2;
 
 import java.sql.Connection;
@@ -8,6 +13,9 @@ import static com.example.jada.m1.h2.Config.PASSWORD;
 import static com.example.jada.m1.h2.Config.URL;
 import static com.example.jada.m1.h2.Config.USER;
 
+/**
+ * Setting a simple H2 database for serialization example
+ */
 public class Setup {
     static final String DROP_DOG_TABLE = "drop table if exists dog";
     static final String DROP_OWNER_TABLE = "drop table if exists owner";
