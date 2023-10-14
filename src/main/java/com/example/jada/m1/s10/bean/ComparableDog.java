@@ -3,14 +3,14 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s10;
+package com.example.jada.m1.s10.bean;
 
 import java.util.Objects;
 
 /**
  * A Comparable JavaBean
  */
-public class DogBean implements Comparable<DogBean> {
+public class ComparableDog implements Comparable<ComparableDog> {
     private String name;
     private String owner;
 
@@ -20,7 +20,7 @@ public class DogBean implements Comparable<DogBean> {
      * @param name  dog name
      * @param owner dog owner
      */
-    public DogBean(String name, String owner) {
+    public ComparableDog(String name, String owner) {
         this.name = name;
         this.owner = owner;
     }
@@ -67,11 +67,11 @@ public class DogBean implements Comparable<DogBean> {
         if (obj == this) {
             return true;
         }
-        if (!(obj instanceof DogBean)) {
+        if (!(obj instanceof ComparableDog)) {
             return false;
         }
 
-        DogBean that = (DogBean) obj;
+        ComparableDog that = (ComparableDog) obj;
         return Objects.equals(this.name, that.name) && Objects.equals(this.owner, that.owner);
     }
 
@@ -84,7 +84,7 @@ public class DogBean implements Comparable<DogBean> {
     }
 
     @Override
-    public int compareTo(DogBean that) {
+    public int compareTo(ComparableDog that) {
         int cmp = this.name.compareTo(that.name);
         if (cmp == 0) {
             return this.owner.compareTo(that.owner);
