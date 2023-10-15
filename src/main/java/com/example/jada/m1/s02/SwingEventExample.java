@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s03;
+package com.example.jada.m1.s02;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

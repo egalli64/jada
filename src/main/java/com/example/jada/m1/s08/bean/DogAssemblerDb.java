@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s09.bean;
+package com.example.jada.m1.s08.bean;
 
 import static com.example.jada.m1.h2.Config.PASSWORD;
 import static com.example.jada.m1.h2.Config.URL;
@@ -18,9 +18,9 @@ import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.example.jada.m1.s07.Dog;
-import com.example.jada.m1.s07.DogOwner;
-import com.example.jada.m1.s07.Person;
+import com.example.jada.m1.s06.Dog;
+import com.example.jada.m1.s06.DogOwner;
+import com.example.jada.m1.s06.Person;
 
 /**
  * DTO (JavaBean) Assembler to H2 DB

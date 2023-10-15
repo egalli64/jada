@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s09.rec;
+package com.example.jada.m1.s08.bean;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,20 +12,11 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import com.example.jada.m1.s08.DogOwner;
+import com.example.jada.m1.s06.DogOwner;
 
-/**
- * DTO assembler to file for DogOwner records
- */
 public class DogAssemblerFile {
     private static final String BASE_FILE_NAME = "dogs.";
 
-    /**
-     * Deserialize a dog owner from file
-     * 
-     * @param key the dog owner key
-     * @return the dog owner record
-     */
     public static DogOwner read(int key) {
         File dump = new File(BASE_FILE_NAME + key);
         try (FileInputStream fis = new FileInputStream(dump); //
@@ -41,18 +32,13 @@ public class DogAssemblerFile {
         }
     }
 
-    /**
-     * Serialize a dog owner to file
-     * 
-     * @param owner a dog owner
-     */
     public static void save(DogOwner owner) {
-        File dump = new File(BASE_FILE_NAME + owner.key());
+        File dump = new File(BASE_FILE_NAME + owner.getKey());
         try (FileOutputStream fos = new FileOutputStream(dump); //
                 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             oos.writeObject(owner);
         } catch (IOException e) {
-            throw new IllegalStateException("Can't save owner / dogs for key " + owner.key(), e);
+            throw new IllegalStateException("Can't save owner / dogs for key " + owner.getKey(), e);
         }
     }
 }

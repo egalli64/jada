@@ -3,13 +3,13 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s09.bean;
+package com.example.jada.m1.s08.bean;
 
 import java.time.LocalDate;
 import java.util.Set;
 
-import com.example.jada.m1.s07.Dog;
-import com.example.jada.m1.s07.DogOwner;
+import com.example.jada.m1.s06.Dog;
+import com.example.jada.m1.s06.DogOwner;
 
 /**
  * Serialize / Deserialize smoke test

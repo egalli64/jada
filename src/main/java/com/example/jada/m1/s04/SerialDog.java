@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s05;
+package com.example.jada.m1.s04;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,28 +15,59 @@ import java.io.Serial;
 import java.io.Serializable;
 
 /**
- * A wrong serial dog
+ * Dog that could be serialized
  */
-public class WrongSerialDog implements Serializable {
+public class SerialDog implements Serializable {
     @Serial
     private static final long serialVersionUID = 42L;
-    private static final String BASE_FILE_NAME = "wrongDog.";
+    private static final String BASE_FILE_NAME = "dog.";
 
     private final String name;
-    /** this field is _not_ meant for serialization */
-    private Tail tail;
+    private int barkCount;
+    /** should not be serialized */
+    private transient int happinessLevel;
 
-    public WrongSerialDog(String name) {
+    /**
+     * Each dog has a name and a happiness level
+     * 
+     * @param name           the dog name
+     * @param happinessLevel the dog happiness level
+     */
+    public SerialDog(String name, int happinessLevel) {
         this.name = name;
-        this.tail = new Tail();
+        this.barkCount = 0;
+        this.happinessLevel = happinessLevel;
     }
 
+    /**
+     * A setter
+     * 
+     * @param happinessLevel the new happiness level
+     */
+    public void setHappinessLevel(int happinessLevel) {
+        this.happinessLevel = happinessLevel;
+    }
+
+    /**
+     * A getter
+     * 
+     * @return the dog name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Dog behavior
+     */
     public void bark() {
-        System.out.println(name + " barks!");
+        barkCount += 1;
+        System.out.printf("%s barks! (%d - %d)%n", name, happinessLevel, barkCount);
     }
 
-    public void wag() {
-        tail.wag();
+    @Override
+    public String toString() {
+        return "SerialDog [name=" + name + ", barkCount=" + barkCount + ", happinessLevel=" + happinessLevel + "]";
     }
 
     /**
@@ -46,13 +77,13 @@ public class WrongSerialDog implements Serializable {
      * @return a new serial dog
      * @throws IllegalStateException in case of failure
      */
-    public static WrongSerialDog read(int key) {
+    public static SerialDog read(int key) {
         File file = new File(BASE_FILE_NAME + key);
         try (FileInputStream fis = new FileInputStream(file); //
                 ObjectInputStream ois = new ObjectInputStream(fis)) {
             Object obj = ois.readObject();
-            if (obj instanceof WrongSerialDog) {
-                return (WrongSerialDog) obj;
+            if (obj instanceof SerialDog) {
+                return (SerialDog) obj;
             } else {
                 throw new IllegalStateException("Bad object type, " + obj.getClass().getCanonicalName());
             }

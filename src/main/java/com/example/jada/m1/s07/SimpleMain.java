@@ -12,23 +12,23 @@ public class SimpleMain {
     public static void main(String[] args) {
         Simple simple = new Simple("hello");
 
-        System.out.println("Simple bean to string: " + simple);
-        System.out.println("Accessing a bean field: " + simple.getS());
-        System.out.println("Simple bean hash code: " + simple.hashCode());
+        System.out.println("Simple record to string: " + simple);
+        System.out.println("Accessing a record field: " + simple.s());
+        System.out.println("Simple record hash code: " + simple.hashCode());
 
         Simple alias = simple;
-        System.out.println("Two references to the same bean are equal: " + simple.equals(alias));
+        System.out.println("Two references to the same record are equal: " + simple.equals(alias));
 
         Simple same = new Simple("hello");
-        System.out.println("Two different beans are equal if their fields are equal: " + simple.equals(same));
+        System.out.println("Two different records are equal if their properies are equal: " + simple.equals(same));
 
         Simple other = new Simple("goodbye");
-        System.out.println("Comparing two different beans: " + simple.equals(other));
+        System.out.println("Comparing two different records: " + simple.equals(other));
 
-        System.out.println("Comparing a bean against null: " + simple.equals(null));
+        System.out.println("Comparing a record against null: " + simple.equals(null));
 
-        Simple nullBean = new Simple(null);
-        System.out.println("A bean with null in it: " + nullBean);
-        System.out.println("Comparing to a bean with null in it: " + nullBean.equals(null));
+        Simple nullRec = new Simple(null);
+        System.out.println("A record with null in it: " + nullRec);
+        System.out.println("Comparing to a record with null in it: " + nullRec.equals(null));
     }
 }
