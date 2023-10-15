@@ -15,7 +15,9 @@ import java.io.Serial;
 import java.io.Serializable;
 
 /**
- * Dog that could be serialized
+ * A dog that could be serialized
+ * <p>
+ * The associated unit test verify it
  */
 public class SerialDog implements Serializable {
     @Serial

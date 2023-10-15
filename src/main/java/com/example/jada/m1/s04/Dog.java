@@ -7,6 +7,8 @@ package com.example.jada.m1.s04;
 
 /**
  * Dog, not meant to be serialized
+ * <p>
+ * The associated unit test verify it can't be serialized
  */
 public class Dog {
     private final String name;

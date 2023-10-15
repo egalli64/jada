@@ -16,6 +16,8 @@ import java.io.Serializable;
 
 /**
  * A wrong serial dog
+ * <p>
+ * The associated unit test verify it can't be serialized
  */
 public class WrongSerialDog implements Serializable {
     @Serial
