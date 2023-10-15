@@ -1,7 +1,7 @@
 /*
- * Introduction to Java Collections Framework
+ * Introduction to Data Structures in Java
  * 
- * https://github.com/egalli64/jcf
+ * https://github.com/egalli64/jada
  */
 package com.example.jada.m4.s4;
 
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Optional
+ * Using Optional in functional context
  */
 public class BasicFunctional {
     /**
@@ -23,16 +23,17 @@ public class BasicFunctional {
         /*
          * ifPresent()
          */
-        for (Optional<Double> opt : opts) {
-            opt.ifPresent(value -> System.out.println("The optional value (if present) is " + value));
+        for (var opt : opts) {
+            opt.ifPresent(x -> System.out.println("The value (if present) is " + x));
         }
+        System.out.println("When using ifPresent, empty value is quietly skipped");
 
         /*
          * ifPresentOrElse()
          */
-        for (Optional<Double> opt : opts) {
-            opt.ifPresentOrElse(value -> System.out.println("The optional value (if present) is " + value),
-                    () -> System.out.println("An empty optional (or else)"));
+        for (var opt : opts) {
+            opt.ifPresentOrElse(x -> System.out.println("The value (if present) is " + x),
+                    () -> System.out.println("No value (or else)!"));
         }
     }
 }

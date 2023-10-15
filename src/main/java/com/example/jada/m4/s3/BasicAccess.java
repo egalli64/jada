@@ -1,7 +1,7 @@
 /*
- * Introduction to Java Collections Framework
+ * Introduction to Data Structures in Java
  * 
- * https://github.com/egalli64/jcf
+ * https://github.com/egalli64/jada
  */
 package com.example.jada.m4.s3;
 
@@ -10,7 +10,7 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**
- * Optional
+ * Access to optional value: check and extraction
  */
 public class BasicAccess {
     /**
@@ -22,9 +22,9 @@ public class BasicAccess {
         List<Optional<Double>> opts = List.of(Optional.of(42.5), Optional.empty());
 
         /*
-         * isPresent() vs isEmpty()
+         * Optional::isPresent() vs Optional::isEmpty()
          */
-        for (Optional<Double> opt : opts) {
+        for (var opt : opts) {
             if (opt.isPresent()) {
                 System.out.println("A present optional: " + opt);
             }
@@ -35,9 +35,9 @@ public class BasicAccess {
         }
 
         /*
-         * get(), orElseThrow(), orElse()
+         * Optional::get(), Optional::orElseThrow(), Optional::orElse()
          */
-        for (Optional<Double> opt : opts) {
+        for (var opt : opts) {
             try {
                 var value = opt.get();
                 System.out.println("The optional value (get) is " + value);

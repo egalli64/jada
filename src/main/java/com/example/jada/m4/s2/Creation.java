@@ -1,7 +1,7 @@
 /*
- * Introduction to Java Collections Framework
+ * Introduction to Data Structures in Java
  * 
- * https://github.com/egalli64/jcf
+ * https://github.com/egalli64/jada
  */
 package com.example.jada.m4.s2;
 
@@ -12,7 +12,7 @@ import java.util.Optional;
  */
 public class Creation {
     /**
-     * The use of static factory methods
+     * Optional static factory methods: of, ofNullable, empty
      * 
      * @param args not used
      */
