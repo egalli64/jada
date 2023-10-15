@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jcf
  */
-package com.example.jada.m3.s4;
+package com.example.jada.m4.s4;
 
 import java.util.List;
 import java.util.Optional;
