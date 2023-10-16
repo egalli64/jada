@@ -1,69 +1,84 @@
 /*
- * Introduction to OOP with Java
+ * Introduction to Data Structures in Java
  * 
- * https://github.com/egalli64/jaoo
+ * https://github.com/egalli64/jada
  */
 package com.example.jada.m2.s04;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
+/**
+ * The List interface
+ */
 public class ListExample {
-    private static final Logger log = Logger.getGlobal();
-
     public static void main(String[] args) {
-        // no assumption here on the actual concrete type
-        List<Integer> list = create(false, 12, 18, -5, -2233);
+        // ArrayList is-a List
+        List<Integer> list = new ArrayList<>(List.of(12, 18, 31, 26, 51));
         System.out.println("Values in list: " + list);
 
-        System.out.println("At index 2: " + list.get(2)); // if it was an array: list[2];
+        /*
+         * Index based get
+         */
 
-        list.add(997);
-
-        int value = -997;
-        int pos = 2;
-        list.add(pos, value);
-        System.out.printf("After adding at position %d element %d: %s%n", pos, value, list);
-        System.out.printf("Index of %d: %d%n", value, list.indexOf(-997));
+        // Compare this to the array notation: array[2];
+        System.out.println("get(2): " + list.get(2));
 
         try {
-            int badPos = 100;
-            list.add(badPos, value);
-        } catch (Exception ex) {
-            log.log(Level.SEVERE, "Careful with indices!", ex);
+            list.get(-3);
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println("get(-3) causes " + ex);
         }
 
-        list.add(list.size(), 10_008);
-        list.add(10_009);
-        System.out.println("No \"holes\" in a collection: " + list);
+        /*
+         * Index based set
+         */
 
-        pos = 3;
-        value = list.remove(pos);
-        System.out.printf("Removing at position %d element %d: %s%n", pos, value, list);
+        // Compare this to the array notation: array[1] = 42;
+        System.out.println("set(1, 42) gives back the previous value: " + list.set(1, 42));
 
-        value = 42;
-        int old = list.set(pos, value); // if it was an array: list[pos] = value;
-        System.out.printf("Set at position %d element %d, was %d: %s%n", pos, value, old, list);
+        try {
+            list.set(23, 0);
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println("set(23, 0) causes " + ex);
+        }
 
-        list.replaceAll(x -> x + 1);
-        System.out.println("Increasing all elements by 1: " + list);
+        /*
+         * Index based add
+         */
 
+        list.add(list.size(), 86);
+        System.out.println("add(list.size(), 86) works fine, index should be in [0, size()]");
+
+        try {
+            list.add(list.size() + 1, 99);
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println("add(list.size() + 1, 99) causes " + ex);
+        }
+
+        /*
+         * Index based remove
+         */
+
+        System.out.println("remove(3) gives back the previous value: " + list.remove(3));
+
+        /*
+         * listIterator
+         */
+
+        System.out.println("Now the list is " + list);
+
+        System.out.print("Use a listIterator() to drop even values and double the other ones: ");
         ListIterator<Integer> it = list.listIterator();
         while (it.hasNext()) {
             Integer current = it.next();
-            if (current < 0) {
-                it.set(-current);
+            if (current % 2 == 0) {
+                it.remove();
+            } else {
+                it.set(current * 2);
             }
         }
-        System.out.println("Traverse and modify a list by list iterator: " + list);
-    }
-
-    public static List<Integer> create(boolean asArray, Integer... values) {
-        List<Integer> input = List.of(values);
-        return asArray ? new ArrayList<>(input) : new LinkedList<>(input);
+        System.out.println(list);
     }
 }
