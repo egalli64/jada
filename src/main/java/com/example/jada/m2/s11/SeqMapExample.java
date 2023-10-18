@@ -41,11 +41,16 @@ public class SeqMapExample {
         System.out.println("pollLastEntry() returns " + seq.pollLastEntry());
         System.out.println("Now the map is " + seq);
 
+        // making things a bit more interesting
+        seq.putFirst(1, "one");
+
         /*
          * Views
          */
         System.out.println("The sequencedKeySet() is " + seq.sequencedKeySet());
         System.out.println("The sequencedValues() is " + seq.sequencedValues());
         System.out.println("The sequencedEntrySet() is " + seq.sequencedEntrySet());
+
+        System.out.println("The reversed() sequence is " + seq.reversed());
     }
 }
