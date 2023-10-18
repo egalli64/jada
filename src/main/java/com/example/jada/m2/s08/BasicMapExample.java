@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class BasicMapExample {
     public static void main(String[] args) {
-        // A hash set
+        // A hash map
         HashMap<Integer, String> hash = new HashMap<>(Map.of(1, "one", 2, "two", 3, "three"));
 
         // HashMap is-a Map

@@ -19,7 +19,7 @@ public class MapExample {
                 Map.entry(2, "two"), //
                 Map.entry(3, "three"));
 
-        // A (modifiable) hash set
+        // A (modifiable) hash map
         HashMap<Integer, String> hash = new HashMap<>(temp);
 
         // HashMap is-a Map
