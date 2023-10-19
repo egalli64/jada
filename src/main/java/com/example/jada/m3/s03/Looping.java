@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Iterable - Iterator
+ * Looping using Iterator (explicitly or implicitly)
  */
 public class Looping {
     /**
@@ -21,20 +21,20 @@ public class Looping {
         Iterable<Integer> iterable = List.of(1, 3, 4, 2, 42);
         System.out.println("Iterable: " + iterable);
 
-        System.out.print("while-has-next loop: ");
+        System.out.print("While-has-next loop: ");
         Iterator<Integer> it = iterable.iterator();
         while (it.hasNext()) {
             System.out.print(it.next() + " ");
         }
         System.out.println();
 
-        System.out.print("for-each loop: ");
+        System.out.print("Looping by for-each statement: ");
         for (Integer value : iterable) {
             System.out.print(value + " ");
         }
         System.out.println();
 
-        System.out.print("Java 8 Iterable::forEach(): ");
+        System.out.print("FP - looping by forEach() method: ");
         iterable.forEach(value -> System.out.print(value + " "));
         System.out.println();
     }
