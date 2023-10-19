@@ -40,8 +40,6 @@ public class ArrayListExample {
         System.out.println("A list by copy constructor: " + list2);
 
         System.out.println("First element is " + list2.get(0));
-        System.out.println("First element (Java 21) is " + list2.getFirst());
-
         System.out.println("Change last, its previous value was " + list2.set(list2.size() - 1, 11));
 
         // removing the element in second position
