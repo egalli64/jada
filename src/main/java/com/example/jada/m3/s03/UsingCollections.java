@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Collections
+ * The Collections class
  */
 public class UsingCollections {
     /**
@@ -20,19 +20,19 @@ public class UsingCollections {
      * @param args not used
      */
     public static void main(String[] args) {
-        Collection<Integer> immutable = List.of(4, 2, 6, 1);
+        Collection<Integer> unmodifiable = List.of(4, 2, 6, 1);
 
-        System.out.println("An immutable collection: " + immutable);
-        System.out.println("max: " + Collections.max(immutable));
-        System.out.println("min: " + Collections.min(immutable));
+        System.out.println("An unmodifiable collection: " + unmodifiable);
+        System.out.println("Its max is " + Collections.max(unmodifiable));
+        System.out.println("Its min is " + Collections.min(unmodifiable));
 
-        List<Integer> mutable = Arrays.asList(4, 2, 6, 1, 8, 0);
-        System.out.println("A fixed-size mutable list: " + mutable);
+        List<Integer> fixedSize = Arrays.asList(4, 2, 6, 1, 8, 0);
+        System.out.println("A fixed size list: " + fixedSize);
 
-        Collections.shuffle(mutable);
-        System.out.println("After shuffling: " + mutable);
+        Collections.shuffle(fixedSize);
+        System.out.println("After shuffling is " + fixedSize);
 
-        Collections.rotate(mutable, 2);
-        System.out.println("After rotate 2: " + mutable);
+        Collections.rotate(fixedSize, 2);
+        System.out.println("After rotate 2 is " + fixedSize);
     }
 }
