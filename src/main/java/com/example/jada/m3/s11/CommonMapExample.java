@@ -10,9 +10,9 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Map
+ * Common operations on Map
  */
-public class MapExample {
+public class CommonMapExample {
     /**
      * Creating and accessing a map
      * 

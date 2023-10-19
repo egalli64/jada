@@ -3,12 +3,12 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m3.s12;
+package com.example.jada.m3.s11;
 
 import java.util.Collection;
 
 /**
- * HashMap exercise
+ * Map exercise
  */
 public class Exercise {
     /**

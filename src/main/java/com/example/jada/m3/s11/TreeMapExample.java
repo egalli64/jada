@@ -3,35 +3,37 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m3.s12;
+package com.example.jada.m3.s11;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
- * HashMap
+ * TreeMap
  */
-public class HashMapExample {
+public class TreeMapExample {
     /**
-     * Some HashMap functionality
+     * Some TreeMap functionality
      * 
      * @param args not used
      */
     public static void main(String[] args) {
         var temp = Map.ofEntries( //
-                Map.entry("Bob", 18944), //
+                Map.entry("Tim", 18944), //
                 Map.entry("Kim", 75491), //
-                Map.entry("Tim", 52318));
+                Map.entry("Bob", 52318));
 
         // copy constructor for map
-        Map<String, Integer> map = new HashMap<>(temp);
-        System.out.println("HashMap: " + map);
+        Map<String, Integer> map = new TreeMap<>(temp);
+        System.out.println("TreeMap: " + map);
 
         // new entry, no previous value
-        Integer prev = map.put("Tom", 65773);
+        Integer prev = map.put("Dan", 65773);
         if (prev == null) {
             System.out.println("New entry added");
         }
+
+        System.out.println("After insering Dan: " + map);
 
         // key is already there, the old value is returned
         prev = map.put("Tom", 77365);
@@ -68,6 +70,39 @@ public class HashMapExample {
 
         if (map.containsValue(52318)) {
             System.out.println("There is at least an entry with the specified value");
+        }
+
+        // get the value, or the expected default
+        Integer value = map.getOrDefault("Missing", 0);
+        if (value == 0) {
+            System.out.println("The passed key is not in the map");
+        }
+
+        value = map.getOrDefault("Tim", 0);
+        if (value != 0) {
+            System.out.println("The number associated to Tim is " + value);
+        }
+
+        // put a new element, only if the key is not already in
+        current = map.putIfAbsent("Tim", 0);
+        if (current != null) {
+            System.out.println("Tim is already in, value " + current);
+        }
+
+        current = map.putIfAbsent("Wim", 84061);
+        if (current == null) {
+            System.out.println("Wim added");
+        }
+
+        // change the value, do nothing if key is not already in
+        prev = map.replace("Les", 0);
+        if (current == null) {
+            System.out.println("Can't replace a value if key is not in");
+        }
+
+        prev = map.replace("Wim", 96851);
+        if (prev != null) {
+            System.out.println("Previous value for Wim: " + prev);
         }
     }
 }
