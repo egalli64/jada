@@ -8,9 +8,9 @@ package com.example.jada.m1.s07;
 /**
  * A simple record
  */
-record Simple(String s) {
+public record ASimple(String s) {
 }
 
 // this won't compile, records are final!
-//record Wrong(int value) extends Simple {
+//public record Wrong(int value) extends Simple {
 //}
