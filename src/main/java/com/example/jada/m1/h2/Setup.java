@@ -35,11 +35,15 @@ public class Setup {
             constraint dog_owner_fk foreign key (owner_id) references owner (owner_id))""";
 
     public static void main(String[] args) {
+        System.out.println("Reset database " + URL);
         dropTables();
         createTables();
+        System.out.println("Done");
     }
 
     private static void createTables() {
+        System.out.println("Creating tables");
+
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
                 Statement stmt = conn.createStatement()) {
             stmt.execute(CREATE_OWNER_TABLE);
@@ -50,6 +54,8 @@ public class Setup {
     }
 
     private static void dropTables() {
+        System.out.println("Dropping tables");
+
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
                 Statement stmt = conn.createStatement()) {
             stmt.execute(DROP_DOG_TABLE);
