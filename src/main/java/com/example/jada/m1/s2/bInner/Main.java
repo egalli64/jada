@@ -6,7 +6,7 @@
 package com.example.jada.m1.s2.bInner;
 
 /**
- * Smoke test for static nested classes
+ * Smoke test for non-static nested classes
  */
 public class Main {
     public static void main(String[] args) {
