@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s06;
+package com.example.jada.m1.s6;
 
 import java.io.Serial;
 import java.util.Set;

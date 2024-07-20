@@ -18,9 +18,9 @@ import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.example.jada.m1.s06.Dog;
-import com.example.jada.m1.s06.DogOwner;
-import com.example.jada.m1.s06.Person;
+import com.example.jada.m1.s6.Dog;
+import com.example.jada.m1.s6.DogOwner;
+import com.example.jada.m1.s6.Person;
 
 /**
  * DTO (JavaBean) Assembler to H2 DB

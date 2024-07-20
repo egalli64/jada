@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import com.example.jada.m1.s06.DogOwner;
+import com.example.jada.m1.s6.DogOwner;
 
 public class DogAssemblerFile {
     private static final String BASE_FILE_NAME = "dogs.";
