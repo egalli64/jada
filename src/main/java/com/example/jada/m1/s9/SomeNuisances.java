@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Example on generic classes
+ * A few nuisances on generic classes
  * 
  * @see Animal an interface
  * @see Dog a class implementing Animal
  */
-public class GenericExamples {
+public class SomeNuisances {
     /**
      * The generic parametric type is tested at compile type but it is _not_
      * available to the JVM at runtime!
