@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s09;
+package com.example.jada.m1.s9;
 
 import java.util.ArrayList;
 import java.util.List;

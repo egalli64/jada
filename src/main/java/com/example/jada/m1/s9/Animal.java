@@ -3,10 +3,10 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s09;
+package com.example.jada.m1.s9;
 
 /**
- * A class
+ * An interface
  */
-public class Dog implements Animal {
+public interface Animal {
 }
