@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s10;
+package com.example.jada.m1.s07;
 
 /**
  * A non-comparable cat
