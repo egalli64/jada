@@ -3,9 +3,9 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s07.rec;
+package com.example.jada.m1.s7.rec;
 
-import com.example.jada.m1.s07.Cat;
+import com.example.jada.m1.s7.Cat;
 
 /**
  * Example for Comparable::compareTo on records

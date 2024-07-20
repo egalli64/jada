@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import com.example.jada.m1.s07.DogOwner;
+import com.example.jada.m1.s7.DogOwner;
 
 /**
  * DTO assembler to file for DogOwner records

@@ -8,9 +8,9 @@ package com.example.jada.m1.s08.rec;
 import java.time.LocalDate;
 import java.util.Set;
 
-import com.example.jada.m1.s07.Dog;
-import com.example.jada.m1.s07.DogOwner;
-import com.example.jada.m1.s07.Person;
+import com.example.jada.m1.s7.Dog;
+import com.example.jada.m1.s7.DogOwner;
+import com.example.jada.m1.s7.Person;
 
 /**
  * Serialize / Deserialize smoke test

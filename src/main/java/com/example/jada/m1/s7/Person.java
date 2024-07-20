@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s07;
+package com.example.jada.m1.s7;
 
 import java.io.Serializable;
 
