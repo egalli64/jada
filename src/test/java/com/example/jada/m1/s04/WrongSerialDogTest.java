@@ -15,6 +15,8 @@ import java.io.OutputStream;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.jada.m1.s4.WrongSerialDog;
+
 /**
  * Ensure that a wrongly designed serializable class won't be serialized
  */

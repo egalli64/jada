@@ -18,6 +18,8 @@ import java.io.PipedOutputStream;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.jada.m1.s4.SerialDog;
+
 class SerialDogTest {
     @Test
     void serialize() {
