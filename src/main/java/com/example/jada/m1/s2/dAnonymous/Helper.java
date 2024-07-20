@@ -3,12 +3,12 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s2;
+package com.example.jada.m1.s2.dAnonymous;
 
 /**
  * An interface
  */
-interface Getter {
+interface Helper {
     /**
      * A method
      * 
