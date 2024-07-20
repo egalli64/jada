@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s08.rec;
+package com.example.jada.m1.s8.rec;
 
 import static com.example.jada.m1.h2.Config.PASSWORD;
 import static com.example.jada.m1.h2.Config.URL;

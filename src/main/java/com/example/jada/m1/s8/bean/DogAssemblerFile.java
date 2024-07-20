@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s08.bean;
+package com.example.jada.m1.s8.bean;
 
 import java.io.File;
 import java.io.FileInputStream;

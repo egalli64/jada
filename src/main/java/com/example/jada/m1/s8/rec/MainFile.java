@@ -3,13 +3,14 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s08.bean;
+package com.example.jada.m1.s8.rec;
 
 import java.time.LocalDate;
 import java.util.Set;
 
-import com.example.jada.m1.s6.Dog;
-import com.example.jada.m1.s6.DogOwner;
+import com.example.jada.m1.s7.Dog;
+import com.example.jada.m1.s7.DogOwner;
+import com.example.jada.m1.s7.Person;
 
 /**
  * Serialize / Deserialize smoke test
@@ -18,7 +19,8 @@ public class MainFile {
     private static final int DEFAULT_KEY = 42;
 
     /**
-     * After serialization is done, deserialize the bean stored with the default key
+     * After serialization is done, deserialize the record stored with the default
+     * key
      * 
      * @param args not used
      */
@@ -36,10 +38,11 @@ public class MainFile {
      */
     private static int serialize() {
         Set<Dog> dogs = Set.of(new Dog("Bob", LocalDate.now()), new Dog("Bix", LocalDate.of(2020, 10, 20)));
-        DogOwner tom = new DogOwner(DEFAULT_KEY, "Tom", "Smith", dogs);
+        Person tom = new Person("Tom", "Smith");
+        DogOwner owner = new DogOwner(DEFAULT_KEY, tom, dogs);
 
-        DogAssemblerFile.save(tom);
+        DogAssemblerFile.save(owner);
         System.out.println("Serializing done");
-        return tom.getKey();
+        return owner.key();
     }
 }
