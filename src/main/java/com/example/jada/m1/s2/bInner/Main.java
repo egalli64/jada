@@ -3,14 +3,12 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s2;
-
-import com.example.jada.m1.s2.bInner.Nesting;
+package com.example.jada.m1.s2.bInner;
 
 /**
  * Smoke test for static nested classes
  */
-public class MainInner {
+public class Main {
     public static void main(String[] args) {
         Nesting nesting = new Nesting(42);
 
@@ -18,8 +16,10 @@ public class MainInner {
         Nesting.PublicInnerClass nested = nesting.new PublicInnerClass();
         nested.hello();
 
-        // Won't compile, not visible
-//        Nesting.PackageInnerClass x;
+        System.out.print("Using a package inner class object: ");
+        // Using "var" instead actual class name to improve readability
+        var pack = nesting.new PackageInnerClass();
+        pack.hello();
 
         // Won't compile, not visible
 //        Nesting.PrivateInnerClass x;
