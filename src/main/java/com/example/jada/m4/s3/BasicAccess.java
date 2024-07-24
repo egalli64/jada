@@ -20,19 +20,21 @@ public class BasicAccess {
      */
     public static void main(String[] args) {
         List<Optional<Double>> opts = List.of(Optional.of(42.5), Optional.empty());
+        System.out.println("A list of optionals: " + opts + "\n");
 
         /*
          * Optional::isPresent() vs Optional::isEmpty()
          */
         for (var opt : opts) {
             if (opt.isPresent()) {
-                System.out.println("A present optional: " + opt);
+                System.out.println("This optional is present: " + opt);
             }
 
             if (opt.isEmpty()) {
-                System.out.println("An empty optional: " + opt);
+                System.out.println("This optional is empty: " + opt);
             }
         }
+        System.out.println();
 
         /*
          * Optional::get(), Optional::orElseThrow(), Optional::orElse()
@@ -52,8 +54,16 @@ public class BasicAccess {
                 System.out.println("Can't get (orElseThrow) value from " + opt);
             }
 
+            try {
+                var value = opt.orElseThrow(IllegalStateException::new);
+                System.out.println("The optional value (orElseThrow an IllegalStateException) is " + value);
+            } catch (IllegalStateException ex) {
+                System.out.println("Can't get (orElseThrow an IllegalStateException) value from " + opt);
+            }
+
             var value2 = opt.orElse(0.0);
-            System.out.println("The optional value or its fallback is " + value2);
+            System.out.println("The optional value or else its fallback: " + value2);
+            System.out.println("---");
         }
     }
 }
