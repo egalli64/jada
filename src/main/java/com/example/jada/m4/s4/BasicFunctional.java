@@ -26,7 +26,7 @@ public class BasicFunctional {
         for (var opt : opts) {
             opt.ifPresent(x -> System.out.println("The value (if present) is " + x));
         }
-        System.out.println("When using ifPresent, empty value is quietly skipped");
+        System.out.println("When using ifPresent, empty value is quietly skipped\n");
 
         /*
          * ifPresentOrElse()
