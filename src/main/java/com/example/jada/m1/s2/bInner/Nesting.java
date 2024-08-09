@@ -28,6 +28,12 @@ public class Nesting {
         }
     }
 
+    class ProtectedInnerClass {
+        void hello() {
+            System.out.println(MESSAGE + " from a protected inner class object with id " + id);
+        }
+    }
+
     private class PrivateInnerClass {
         private void hello() {
             System.out.println(MESSAGE + " from a private inner class object with id " + id);

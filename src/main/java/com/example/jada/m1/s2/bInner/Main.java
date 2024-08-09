@@ -21,6 +21,11 @@ public class Main {
         var pack = nesting.new PackageInnerClass();
         pack.hello();
 
+        System.out.print("Using a protected inner class object: ");
+        // Using "var" instead actual class name to improve readability
+        var pro = nesting.new ProtectedInnerClass();
+        pro.hello();
+
         // Won't compile, not visible
 //        Nesting.PrivateInnerClass x;
 
