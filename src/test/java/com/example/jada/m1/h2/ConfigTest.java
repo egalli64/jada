@@ -51,7 +51,7 @@ class ConfigTest {
             assertThat(db).isEqualTo("H2");
 
             String version = dmd.getDatabaseProductVersion();
-            assertThat(version).startsWith("2.2");
+            assertThat(version).startsWith("2.3");
         } catch (SQLException e) {
             fail("Failure on metadata", e);
         }
