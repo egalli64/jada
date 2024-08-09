@@ -3,10 +3,10 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s04;
+package com.example.jada.m1.s4;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -17,8 +17,6 @@ import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 
 import org.junit.jupiter.api.Test;
-
-import com.example.jada.m1.s4.SerialDog;
 
 class SerialDogTest {
     @Test

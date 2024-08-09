@@ -3,9 +3,10 @@
  * 
  * https://github.com/egalli64/jada
  */
-package com.example.jada.m1.s04;
+package com.example.jada.m1.s4;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -14,8 +15,6 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
 import org.junit.jupiter.api.Test;
-
-import com.example.jada.m1.s4.Dog;
 
 /**
  * Ensure that a non-serializable class won't be serialized
