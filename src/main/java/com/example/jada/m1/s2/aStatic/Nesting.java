@@ -23,6 +23,12 @@ public class Nesting {
         }
     }
 
+    protected static class ProtectedStaticNestedClass {
+        void hello() {
+            System.out.println(MESSAGE + " from a protected static nested class");
+        }
+    }
+
     private static class PrivateStaticNestedClass {
         private void hello() {
             System.out.println(MESSAGE + " from a private static nested class");

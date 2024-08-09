@@ -18,6 +18,10 @@ public class Main {
         var pack = new Nesting.PackageStaticNestedClass();
         pack.hello();
 
+        System.out.print("Using a protected nested class object: ");
+        var pro = new Nesting.ProtectedStaticNestedClass();
+        pro.hello();
+
         // Won't compile, not visible
 //        Nesting.PrivateStaticNestedClass x;
 
