@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 
 class SerialDogTest {
     @Test
-    void serialize() {
+    void givenSerializableDogWhenSerialize() {
         SerialDog tom = new SerialDog("Tom", 42);
 
         try (OutputStream os = new ByteArrayOutputStream(); //
@@ -37,16 +37,18 @@ class SerialDogTest {
     }
 
     @Test
-    void deserialize() {
+    void givenSerializableDogWhenDeserialize() {
         String name = "Tom";
 
         try (PipedOutputStream pos = new PipedOutputStream();
                 PipedInputStream is = new PipedInputStream(pos);
                 ObjectOutputStream oss = new ObjectOutputStream(pos);
                 ObjectInputStream ois = new ObjectInputStream(is)) {
+            // push a dog in the stream, given its serialization works fine
             oss.writeObject(new SerialDog(name, 42));
             oss.flush();
 
+            // the actual test
             Object obj = ois.readObject();
             assertThat(obj).isInstanceOf(SerialDog.class);
 

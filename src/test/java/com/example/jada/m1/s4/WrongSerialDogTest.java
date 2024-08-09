@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
  */
 class WrongSerialDogTest {
     @Test
-    void negative() {
+    void givenNonSerializableDogWhenSerializeThenException() {
         WrongSerialDog tom = new WrongSerialDog("Tom");
 
         try (OutputStream os = new ByteArrayOutputStream(); //
