@@ -22,7 +22,7 @@ import com.example.jada.m1.s4.Dog;
  */
 class DogTest {
     @Test
-    void negative() {
+    void givenNonSerializableDogWhenSerializeThenException() {
         Dog tom = new Dog("Tom");
 
         try (OutputStream os = new ByteArrayOutputStream(); //
