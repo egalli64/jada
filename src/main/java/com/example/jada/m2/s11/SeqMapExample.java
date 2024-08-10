@@ -14,11 +14,7 @@ import java.util.SequencedMap;
  */
 public class SeqMapExample {
     public static void main(String[] args) {
-        // A (modifiable) linked hash map
-        LinkedHashMap<Integer, String> lhm = new LinkedHashMap<>(Map.ofEntries(Map.entry(2, "two")));
-
-        // LinkedHashMap is-a SequencedMap
-        SequencedMap<Integer, String> seq = lhm;
+        SequencedMap<Integer, String> seq = new LinkedHashMap<>(Map.ofEntries(Map.entry(2, "two")));
         System.out.println("A sequenced map: " + seq);
 
         /**
