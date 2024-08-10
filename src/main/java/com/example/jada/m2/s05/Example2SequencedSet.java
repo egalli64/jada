@@ -10,7 +10,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * The Set-family interfaces
+ * The SequencedSet interface
  */
 public class Example2SequencedSet {
     public static void main(String[] args) {
