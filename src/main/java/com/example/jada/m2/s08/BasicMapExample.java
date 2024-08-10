@@ -13,19 +13,16 @@ import java.util.Map;
  */
 public class BasicMapExample {
     public static void main(String[] args) {
-        // A hash map
-        HashMap<Integer, String> hash = new HashMap<>(Map.of(1, "one", 2, "two", 3, "three"));
-
-        // HashMap is-a Map
-        Map<Integer, String> map = hash;
+        // Use an unmodifiable map to create a HashMap, seen as a Map
+        Map<Integer, String> map = new HashMap<>(Map.of(1, "one", 2, "two", 3, "three"));
         System.out.println("A map: " + map);
 
         /*
          * Views on Map
          */
-        System.out.println("The map keySet() is " + map.keySet());
-        System.out.println("The map values() is " + map.values());
-        System.out.println("The map entrySet() is " + map.entrySet());
+        System.out.println("View on the map keys: " + map.keySet());
+        System.out.println("View on the map values: " + map.values());
+        System.out.println("View on the map entries: " + map.entrySet());
 
         /**
          * Collection-like methods
