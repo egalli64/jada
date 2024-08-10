@@ -27,6 +27,7 @@ public class ListExample {
 
         try {
             list.get(-3);
+            System.out.println("Unexpected! Can't get the value of an element passing a bad index");
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("get(-3) causes " + ex);
         }
@@ -40,6 +41,7 @@ public class ListExample {
 
         try {
             list.set(23, 0);
+            System.out.println("Unexpected! Can't set the value of an element passing a bad index");
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("set(23, 0) causes " + ex);
         }
@@ -53,6 +55,7 @@ public class ListExample {
 
         try {
             list.add(list.size() + 1, 99);
+            System.out.println("Unexpected! Can't add an element creating an 'hole' in a list");
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("add(list.size() + 1, 99) causes " + ex);
         }
