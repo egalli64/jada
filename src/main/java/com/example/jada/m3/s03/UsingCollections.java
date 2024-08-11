@@ -20,6 +20,7 @@ public class UsingCollections {
      * @param args not used
      */
     public static void main(String[] args) {
+        // An unmodifiable list seen as a collection
         Collection<Integer> unmodifiable = List.of(4, 2, 6, 1);
 
         System.out.println("An unmodifiable collection: " + unmodifiable);
