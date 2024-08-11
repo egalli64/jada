@@ -18,6 +18,7 @@ public class Looping {
      * @param args not used
      */
     public static void main(String[] args) {
+        // An unmodifiable list seen as an iterable
         Iterable<Integer> iterable = List.of(1, 3, 4, 2, 42);
         System.out.println("Iterable: " + iterable);
 
