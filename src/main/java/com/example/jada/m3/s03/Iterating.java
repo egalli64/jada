@@ -21,12 +21,13 @@ public class Iterating {
      * @param args not used
      */
     public static void main(String[] args) {
-        // A simple way to create a short unmodifiable list
+        // An unmodifiable list seen as a collection
         Collection<Integer> unmodifiable = List.of(3, 6, 1, 9, 2);
 
         // Each concrete collection has a nice toString() override
         System.out.println("An unmodifiable collection: " + unmodifiable);
 
+        // Each concrete collection is iterable
         Iterator<Integer> itUm = unmodifiable.iterator();
         if (itUm.hasNext()) {
             System.out.println("The next (actually, first) element is: " + itUm.next());
@@ -39,7 +40,7 @@ public class Iterating {
 
         // A collection that can't change size, but whose elements can change
         Collection<Integer> fixedSize = Arrays.asList(3, 6, 1, 9, 2);
-        System.out.println("An fixed size collection: " + unmodifiable);
+        System.out.println("An fixed size collection: " + fixedSize);
 
         Iterator<Integer> itFs = fixedSize.iterator();
         if (itFs.hasNext()) {
