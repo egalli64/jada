@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Three exercises. Compare int[] and List&lt;Integer&gt; behavior
  */
-public class Exercise {
+public class Exercises {
     /**
      * Extract from input the even values and return them in an array
      * <p>
