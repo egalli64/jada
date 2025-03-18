@@ -26,6 +26,12 @@ public class ComparableDog implements Comparable<ComparableDog> {
     }
 
     /**
+     * No-arg constructor
+     */
+    public ComparableDog() {
+    }
+
+    /**
      * Getter
      * 
      * @return dog name
