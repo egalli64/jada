@@ -84,7 +84,7 @@ public class BasicStructure {
         coll = set;
 
         // for-each support
-        Iterable<Integer> it = coll;
+        Iterable<Integer> iterable = coll;
 
         /*
          * The Map hierarchy
@@ -102,7 +102,7 @@ public class BasicStructure {
         // SequencedMap is-a Map, a key/value mapping
         Map<String, String> map = seqMap;
 
-        System.out.println("An empty iterable: " + it);
+        System.out.println("An empty iterable: " + iterable);
         System.out.println("An empty map: " + map);
     }
 }
