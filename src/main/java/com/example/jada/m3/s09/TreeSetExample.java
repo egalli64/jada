@@ -19,7 +19,7 @@ public class TreeSetExample {
      * @param args not used
      */
     public static void main(String[] args) {
-        List<Integer> data = List.of(5, 8, 99);
+        List<Integer> data = List.of(99, 5, 8);
 
         SortedSet<Integer> set = new TreeSet<>(data);
         System.out.println("The sorted set: " + set);

@@ -32,7 +32,7 @@ public class ArrayListExample {
         list.add(42);
         System.out.println("After adding elements: " + list);
 
-        ArrayList<Integer> list2 = new ArrayList<>(list);
+        List<Integer> list2 = new ArrayList<>(list);
         System.out.println("A list by copy constructor: " + list2);
 
         System.out.println("First element is " + list2.get(0));

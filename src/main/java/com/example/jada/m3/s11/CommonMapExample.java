@@ -29,7 +29,9 @@ public class CommonMapExample {
         System.out.println("Another map: " + others);
 
         // views
-        Set<Map.Entry<String, Integer>> entries = others.entrySet();
+        // when the type is complex, the use of "var" is preferred
+        // Set<Map.Entry<String, Integer>> entries = others.entrySet();
+        var entries = others.entrySet();
         System.out.println("All entries: " + entries);
 
         Set<String> keys = others.keySet();
